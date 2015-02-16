@@ -326,7 +326,7 @@ class WordCloud(object):
         else:
             height, width = self.height, self.width
 
-        img = Image.new("RGB", (width * self.scale, height * self.scale), self.background_color)
+        img = Image.new("RGBA", (width * self.scale, height * self.scale), self.background_color)
         draw = ImageDraw.Draw(img)
         for (word, count), font_size, position, orientation, color in self.layout_:
             font = ImageFont.truetype(self.font_path, font_size * self.scale)
